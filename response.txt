@@ -1,0 +1,12 @@
+after the client (axios) makes a request to the server.
+
+The server responds with (response):
+    (you can say, response.cofig, or resonse.status, response.data)
+{data: Array(2), status: 200, statusText: "OK", headers: {…}, config: {…}, …}
+config: {url: "/articles", method: "get", headers: {…}, proxy: {…}, transformRequest: Array(1), …}
+data: (2) [{…}, {…}]
+headers: {access-control-allow-origin: "*", connection: "keep-alive", content-length: "211", content-type: "application/json; charset=utf-8", date: "Fri, 16 Jul 2021 22:01:33 GMT", …}
+request: XMLHttpRequest {readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, onreadystatechange: ƒ, …}
+status: 200
+statusText: "OK"
+__proto__: Object

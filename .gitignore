@@ -1,0 +1,9 @@
+/node_modules/
+/dist/
+/data/
+/reponse.txt/
+/test.rest/
+/testingInfo.txt/
+/txt.txt/
+/css.txt/
+npm-debug.log
