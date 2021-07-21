@@ -1,3 +1,8 @@
 stage('SCM Stage') {
     // some block
+    stage('Stage 1'){
+        steps{
+            echo "Git PipeLine Connected...Congrats!"
+        }
+    }
 }
