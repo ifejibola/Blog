@@ -1,0 +1,3 @@
+stage('SCM Stage') {
+    // some block
+}
