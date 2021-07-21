@@ -1,0 +1,37 @@
+
+Types OF TESTING :
+
+# Unit Testing (single components):
+    very fine-grained testing single components to make sure they function properly.
+
+# Integration Testing (Btw Mulitple components):
+    tests the interaction between Mulitple components or even whole system.
+
+
+QUALITY ASSURANCE (QA) TECHNIQUES :
+
+Page Testing :
+    "Page testing" : tests the presentation and frontend functionality of a page.
+                    This can involve both unit and integration testing.(using Mocha)
+
+    "Cross-page-testing" :  Involves testing functionality that requires NAVIGATION from 
+                    one page to another. e.g ecommerce site CHECKOUT page spans multiple pages.
+                    Since it involves more than one component, it is considered integration testing.
+                    (using Zombie.js)
+
+    "Logic Testing" :   Will execute unit and integration tests against our logic domain.
+                        It will be testing only javaScript.
+
+    "Linting"   :   It isn't about finding errors, but potential errors. The general concept
+                    of linting is that it identifies areas that could represent possible errors, 
+                    or fragile constructs that could lead to errors in the future.
+                    (using JSHint)
+
+    "Link checking" : make sure there are no broken links on your site.
+
+
+    #####
+#
+Tests usually require a function called assert (or expect). 
+This is available in the Node framework, but not inherently in a browser,
+ so we’ll be using the Chai assertion library:

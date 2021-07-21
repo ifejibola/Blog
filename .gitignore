@@ -6,4 +6,5 @@
 /testingInfo.txt/
 /txt.txt/
 /css.txt/
+.DS_Store
 npm-debug.log
