@@ -1,11 +1,10 @@
-stage('SCM Stage') {
-    // some block
-    stage('Stage 1'){
-        steps{
-            git branch: 'devOps', url: 'https://github.com/ifejibola/Blog.git'
-
-            echo "Git PipeLine Connected...Congrats!"
+pipeline {
+    agent any 
+    stages {
+        stage('Stage 1') {
+            steps {
+                echo 'Hello world!' 
+            }
         }
-        
     }
 }
