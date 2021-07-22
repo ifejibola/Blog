@@ -1,10 +1,24 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Hello Msg, Install npm pkgs...') {
             steps {
-                echo 'Hello world!' 
+                echo 'Welcome ife!' 
+                npm install
             }
         }
+        stage('Start Application') {
+            steps {
+                echo 'Webpack Build, Express Server' 
+                npm run dev
+            }
+        }
+        // stage('test') {
+        //     steps {
+        //         echo 'Running Tests...' 
+        //         npm test
+        //     }
+        // }
+
     }
 }
