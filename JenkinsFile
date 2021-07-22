@@ -4,13 +4,13 @@ pipeline {
         stage('Hello Msg, Install npm pkgs...') {
             steps {
                 echo 'Welcome ife!' 
-                npm install
+                sh "npm install"
             }
         }
         stage('Start Application') {
             steps {
                 echo 'Webpack Build, Express Server' 
-                npm run dev
+                sh "npm run dev"
             }
         }
         // stage('test') {
