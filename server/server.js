@@ -62,6 +62,7 @@ server.use((req, res, next) => {
 })
 server.use((req, res, next) => {
     expect(true).to.be.true;
+    console.log('Axios @0.21.1!!');
     if (!req.articles) {
         let s = '';
         for (let name in req.headers) s += name + ': ' + req.headers[name] + '\n'
