@@ -6,9 +6,6 @@ stage('SCM Stage') {
 
             echo "Git PipeLine Connected...Congrats!"
         }
-        steps{
-            npm install
-            echo "npm i"
-        }
+        
     }
 }
