@@ -46,23 +46,7 @@ server.set('port', process.env.PORT || 9090)
 server.use(express.static('public'))
 
 server.use((req, res, next) => {
-
-
-    //detect test=1 in the querystring. it must appear before any routes 
-    /*
-        test=1 appears in the querstring for any page(if we are not running on production server)
-        then the res.locals.showTests will set to be true.
-
-        res.locals part of the context that will be passed to views 
-    */
-    res.locals.showtests = server.get('env') !== 'production' &&
-        req.query.test === '1';
-
-    next();
-})
-server.use((req, res, next) => {
-    expect(true).to.be.true;
-    console.log('Axios @0.21.1!!');
+    // console.log('Axios @0.21.1!!');
     if (!req.articles) {
         let s = '';
         for (let name in req.headers) s += name + ': ' + req.headers[name] + '\n'
@@ -100,14 +84,14 @@ server.get('*', (req, res) => {
                 });
             }
         });
-    console.log('promises[matchRoutes]: ', promises)
+    // console.log('promises[matchRoutes]: ', promises)
     // console.log(req.articles)
 
     Promise.all(promises).then(() => {
         const context = {};
         const content = renderer(req, store, context);
-
         if (context.url) {
+            console.log('context url:', context.url)
             return res.redirect(301, context.url)
         }
         if (context.notFound) {
@@ -119,14 +103,6 @@ server.get('*', (req, res) => {
 });
 
 
-
-// describe('Array', () => {
-//     describe('#indexOf()', () => {
-//         it('Should reutrn -1 when the value is not present', () => {
-//             assert.equal([1, 2, 3].indexOf(4), -1);
-//         });
-//     });
-// });
 // //custom 404 page
 // server.use((req, res) => {
 //     res.send(404, '404 - not found')

@@ -19,8 +19,18 @@ function MenuNav(props) {
                         <span></span>
                     </Link>
                     <ul className="nav navbar-nav">
-                        <li className="nav-item navbar-dropdown navbar-dropdown-mega active">
-                            <Link to="/about" href="home.html" className="nav-link">
+                        {/* <li className="nav-item navbar-dropdown navbar-dropdown-mega active"> */}
+                        <li className="nav-item navbar-dropdown navbar-dropdown-mega">
+                            <Link to="/home" className="nav-link">
+                                <span className="nav-link-name">Home</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 9L5 5L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </Link>
+
+                        </li>
+                        <li className="nav-item navbar-dropdown navbar-dropdown-mega">
+                            <Link to="/about" className="nav-link">
                                 <span className="nav-link-name">about</span>
                                 <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L5 5L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
