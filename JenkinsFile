@@ -10,7 +10,7 @@ pipeline {
         stage('ready to run or deploy') {
             steps {
                 echo 'Did you deploy?' 
-                // sh "npm run dev"
+                sh "npm test"
             }
         }
         stage('Start Application') {
