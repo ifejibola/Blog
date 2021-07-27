@@ -20,7 +20,7 @@ const server = express();
 
 server.use(
     '/api',
-    proxy('localhost:9090', {
+    proxy('https://ifes-blog.herokuapp.com', {
         //proxyReqOptDecorator
         proxyReqOptDecorator(options) {
             options.headers['x-forwarded-host'] = 'localhost:9090';
