@@ -7,6 +7,12 @@ pipeline {
                 sh "npm install"
             }
         }
+        stage('ready to run or deploy') {
+            steps {
+                echo 'Did you deploy?' 
+                // sh "npm run dev"
+            }
+        }
         stage('Start Application') {
             steps {
                 echo 'Webpack Build, Express Server' 
