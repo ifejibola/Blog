@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 function ComingSoon() {
 
     useEffect(() => {
-        console.log("Running..")
+        console.log("Running....")
     })
     return (
         <>
