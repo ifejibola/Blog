@@ -1,0 +1,6 @@
+version: '3'
+services:
+  blogger:
+    image: 226220986365.dkr.ecr.us-east-2.amazonaws.com/blogger:1.0
+    ports:
+      - 9090:9090 
