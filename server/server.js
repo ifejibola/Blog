@@ -136,7 +136,7 @@ import articlesRoutes from './routes/article.routes'
 
 import { matchRoutes } from 'react-router-config'
 import MainRouter from '../client/MainRouter'
-dotenv.config();
+// dotenv.config();
 
 //Express 
 const server = express();
@@ -229,7 +229,7 @@ server.get('*', (req, res) => {
 //     console.error(err.stack);
 //     res.status(500).send('500 - Server Error!')
 // })
-server.listen(server.get('port'), () => {
+server.listen(server.get('port'), '0.0.0.0', () => {
     // console.log(res);
     var port = server.get('port');
     console.log(`Article Server Listening on port: ${server.get('port')} `);
