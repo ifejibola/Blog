@@ -2685,7 +2685,7 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 function ComingSoon() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    console.log("Running..");
+    console.log("Running....deploying");
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "content-wrap"
@@ -2985,7 +2985,7 @@ function Header(props) {
     "data-show-duration": "500",
     "data-show-distance": "10",
     "data-show-delay": "150"
-  }, "lifestyle - 05 may, 2020"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+  }, "Today is - 30 jul, 2021"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "h2 mb-n10 show-on-scroll",
     "data-show-duration": "500",
     "data-show-distance": "10"
@@ -2993,7 +2993,7 @@ function Header(props) {
     className: "h2 mb-n10 show-on-scroll",
     "data-show-duration": "500",
     "data-show-distance": "10"
-  }, "Are you getting the Most out of your Travel?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null))));
+  }, "Jenkins and Heroku Pipeline!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null))));
 }
 
 ;
