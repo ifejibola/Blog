@@ -4,10 +4,10 @@ export const fetch_Articles_List = () => async (dispatch, getState, api) => {
 
     // await axios.get('/articles', {
     await api.get('/articles', {
-        // proxy: {
-        //     host: 'localhost',
-        //     port: 9090
-        // }
+        proxy: {
+            host: 'http://blog-deployer.herokuapp.com',
+            // port: 9090
+        }
     })
         .then(response => {
             console.log('Server responded with: ', response)

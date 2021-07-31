@@ -143,7 +143,8 @@ const server = express();
 
 server.use(
     '/api',
-    proxy('https://blog-deployer.herokuapp.com', {
+    proxy('http://blog-deployer.herokuapp.com', {
+        // proxy(`http:localhost:${process.env.PORT}`, {
         // proxyReqOptDecorator
         proxyReqOptDecorator(options) {
             options.headers['x-forwarded-host'] = 'localhost:9090';

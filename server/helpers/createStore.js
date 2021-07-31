@@ -7,7 +7,8 @@ export default (req) => {
 
     const axiosInstance = axios.create({
         // baseUrl: 'http://localhost:9090',
-        baseUrl: 'https://blog-deployer.herokuapp.com',
+        baseUrl: 'http://blog-deployer.herokuapp.com',
+        // baseUrl: `http:localhost:${process.env.PORT}`,
         headers: { cookie: req.get('cookie') || '' },
     });
 
