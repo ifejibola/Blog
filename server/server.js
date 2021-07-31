@@ -143,8 +143,8 @@ const server = express();
 
 server.use(
     '/api',
-    // proxy('http://blog-deployer.herokuapp.com', {
-    proxy(`http:localhost:${process.env.PORT}`, {
+    proxy('http://blog-deployer.herokuapp.com', {
+        // proxy(`http:localhost:${process.env.PORT}`, {
         // proxyReqOptDecorator
         proxyReqOptDecorator(options) {
             options.headers['x-forwarded-host'] = 'localhost:9090';
@@ -157,7 +157,7 @@ server.use(express.json());
 server.use(cors());
 
 // server.set('port', process.env.PORT)
-server.set('port', process.env.PORT || 9090)
+// server.set('port', process.env.PORT || 9090)
 
 // make folder public
 server.use(express.static('public'))
@@ -230,8 +230,10 @@ server.get('*', (req, res) => {
 //     console.error(err.stack);
 //     res.status(500).send('500 - Server Error!')
 // })
-server.listen(server.get('port'), '0.0.0.0', () => {
+// server.listen(server.get('port'), () => {
+server.listen(process.env.PORT || 9090, () => {
     // console.log(res);
-    var port = server.get('port');
-    console.log(`Article Server Listening on port: ${server.get('port')} `);
+    // var port = server.get('port');
+    console.log(`Article Server Listening on port: ${process.env.PORT} `);
+    // console.log(`Article Server Listening on port: ${server.get('port')} `);
 });
