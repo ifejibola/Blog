@@ -11,7 +11,7 @@ function Header(props) {
                 <div className="col-12 col-lg-8">
                     <div className="subtitle show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="150">Today is - 30 jul, 2021</div>
                     <h1 className="h2 mb-n10 show-on-scroll" data-show-duration="500" data-show-distance="10">{props.appName}</h1>
-                    <h1 className="h2 mb-n10 show-on-scroll" data-show-duration="500" data-show-distance="10">Jenkins and Heroku Pipeline!</h1>
+                    <h1 className="h2 mb-n10 show-on-scroll" data-show-duration="500" data-show-distance="10">Jenkins and Heroku Pipeline!!</h1>
                     <br />
                 </div>
 

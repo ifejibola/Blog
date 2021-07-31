@@ -6,7 +6,7 @@ const CURRENT_WORKING_DIR = process.cwd()
 
 const config = {
     name: "browser",
-    mode: "development",
+    // mode: "development",
     devtool: 'eval-source-map',
     entry: './client/Main.js',
     devtool: 'cheap-module-source-map',
