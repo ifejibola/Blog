@@ -127,8 +127,7 @@ import proxy from 'express-http-proxy'
 import dotenv from 'dotenv'
 
 // import config from '../config/config'
-import assert from 'assert'
-import chai from 'chai/register-expect'
+
 
 import createStore from './helpers/createStore'
 import renderer from './helpers/renderer';
