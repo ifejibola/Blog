@@ -6,7 +6,7 @@ const nodeExternals = require('webpack-node-externals')
 
 const config = {
     name: 'server',
-    mode: "development",
+    mode: "production",
 
     entry: './server/server.js',
     externalsPresets: { node: true }, // ignore built in modules like paht, fs, etc
