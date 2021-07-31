@@ -4,11 +4,11 @@ export const fetch_Articles_List = () => async (dispatch, getState, api) => {
 
     // await axios.get('/articles', {
     await api.get('/articles', {
-        proxy: {
-            // host: `http:localhost:${process.env.PORT}`
-            host: 'http://blog-deployer.herokuapp.com'
-            // port: 9090
-        }
+        // proxy: {
+        //     // host: `http:localhost:${process.env.PORT}`
+        //     // host: 'http://blog-deployer.herokuapp.com'
+        //     // port: 9090
+        // }
         // proxy: {
         //     host: 'localhost',
         //     port: 9090
