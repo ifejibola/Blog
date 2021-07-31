@@ -2,8 +2,8 @@ import axios from 'axios'
 import { FETCH_ALL_ARTICLES } from './types';
 export const fetch_Articles_List = () => async (dispatch, getState, api) => {
 
-    // await axios.get('/articles', {
-    await api.get('/articles', {
+    await axios.get('/articles', {
+        // await api.get('/articles', {
         // proxy: {
         //     host: 'localhost',
         //     port: 9090
