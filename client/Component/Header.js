@@ -9,9 +9,9 @@ function Header(props) {
             <div className="row justify-content-center text-center pt-60 pb-130 mt-30">
 
                 <div className="col-12 col-lg-8">
-                    <div className="subtitle show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="150">lifestyle - 05 may, 2020</div>
+                    <div className="subtitle show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="150">Today is - 30 jul, 2021</div>
                     <h1 className="h2 mb-n10 show-on-scroll" data-show-duration="500" data-show-distance="10">{props.appName}</h1>
-                    <h1 className="h2 mb-n10 show-on-scroll" data-show-duration="500" data-show-distance="10">Are you getting the Most out of your Travel?</h1>
+                    <h1 className="h2 mb-n10 show-on-scroll" data-show-duration="500" data-show-distance="10">Jenkins and Heroku Pipeline!!</h1>
                     <br />
                 </div>
 

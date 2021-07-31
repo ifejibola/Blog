@@ -33,14 +33,15 @@ module.exports = {
                 use: 'file-loader'
             }
         ]
-    }, plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
-        }),
-        new webpack.ProvidePlugin({
-            process: 'process/browser',
-            Buffer: ['buffer', 'Buffer'],
-        }),
+    },
+    // plugins: [
+    //     new webpack.DefinePlugin({
+    //         'process.env.NODE_ENV': JSON.stringify('development')
+    //     }),
+    //     new webpack.ProvidePlugin({
+    //         process: 'process/browser',
+    //         Buffer: ['buffer', 'Buffer'],
+    //     }),
 
-    ]
+    // ]
 }

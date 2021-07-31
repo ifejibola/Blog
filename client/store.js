@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 
 const getMiddleware = () => {
     if (process.env.NODE_ENV === 'production') {
-        return applyMiddleware(axiosInstance)
+        return applyMiddleware(thunk.withExtraArgument(axiosInstance))
     } else {
         //enable additional
         return applyMiddleware(thunk.withExtraArgument(axiosInstance), createLogger())

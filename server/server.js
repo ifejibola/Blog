@@ -4,8 +4,7 @@ import path from 'path'
 import cors from 'cors'
 import proxy from 'express-http-proxy'
 
-import assert from 'assert'
-import chai from 'chai/register-expect'
+import dotenv from 'dotenv'
 
 import createStore from './helpers/createStore'
 import renderer from './helpers/renderer';
@@ -15,15 +14,18 @@ import articlesRoutes from './routes/article.routes'
 import { matchRoutes } from 'react-router-config'
 import MainRouter from '../client/MainRouter'
 
+dotenv.config();
+
 //Express 
 const server = express();
 
 server.use(
     '/api',
-    proxy('https://ifes-blog.herokuapp.com', {
-        //proxyReqOptDecorator
+    proxy('http://blog-deployer.herokuapp.com', {
+        // proxy(`http:localhost:${process.env.PORT}`, {
+        // proxyReqOptDecorator
         proxyReqOptDecorator(options) {
-            options.headers['x-forwarded-host'] = 'localhost:9090';
+            // options.headers['x-forwarded-host'] = 'localhost:9090';
             return options
         }
     })
@@ -32,6 +34,7 @@ server.use(express.json());
 // cors
 server.use(cors());
 
+// server.set('port', process.env.PORT)
 server.set('port', process.env.PORT || 9090)
 
 // make folder public
@@ -44,7 +47,7 @@ server.use((req, res, next) => {
         for (let name in req.headers) s += name + ': ' + req.headers[name] + '\n'
         // console.log(s)
         console.log('No articles to return ')
-        console.log(req.ip)
+        console.log('ips', req.ip)
     }
     if (req.articles)
         console.log('present!')
