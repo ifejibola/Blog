@@ -9,10 +9,10 @@ export const fetch_Articles_List = () => async (dispatch, getState, api) => {
         //     // host: 'http://blog-deployer.herokuapp.com'
         //     // port: 9090
         // }
-        proxy: {
-            host: 'localhost',
-            port: 9090
-        }
+        // proxy: {
+        //     host: 'localhost',
+        //     port: 9090
+        // }
     })
         .then(response => {
             console.log('Server responded with: ', response)

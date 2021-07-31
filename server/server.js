@@ -231,7 +231,8 @@ server.get('*', (req, res) => {
 //     res.status(500).send('500 - Server Error!')
 // })
 // server.listen(server.get('port'), () => {
-server.listen(process.env.PORT || 9090, () => {
+// server.listen(process.env.PORT || 9090, () => {
+server.listen(9090, () => {
     // console.log(res);
     // var port = server.get('port');
     console.log(`Article Server Listening on port: ${process.env.PORT} `);
