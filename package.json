@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Article Blog",
   "main": "server.js",
-  "proxy": "http://localhost:9090",
+  "proxy": "http://blog-deployer.herokuapp.com",
   "engines": {
     "node": "12.18.2",
     "npm": "7.14.0"
