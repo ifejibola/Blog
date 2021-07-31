@@ -232,7 +232,7 @@ server.get('*', (req, res) => {
 // })
 // server.listen(server.get('port'), () => {
 // server.listen(process.env.PORT || 9090, () => {
-server.listen(9090, () => {
+server.listen(process.env.PORT, () => {
     // console.log(res);
     // var port = server.get('port');
     console.log(`Article Server Listening on port: ${process.env.PORT} `);
