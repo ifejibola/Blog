@@ -147,7 +147,7 @@ server.use(
         // proxy(`http:localhost:${process.env.PORT}`, {
         // proxyReqOptDecorator
         proxyReqOptDecorator(options) {
-            options.headers['x-forwarded-host'] = 'localhost:9090';
+            // options.headers['x-forwarded-host'] = 'localhost:9090';
             return options
         }
     })
