@@ -11,8 +11,8 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "dev:build-server": "webpack --config webpack.config.server.js --watch",
-    "dev:build-client": "webpack --config webpack.config.client.js --watch",
+    "dev:build-server": "webpack --mode=development --config webpack.config.server.js --watch",
+    "dev:build-client": "webpack --mode=development --config webpack.config.client.js --watch",
     "build": "NODE_ENV=production webpack --config webpack.config.client.js && webpack --config webpack.config.server.js",
     "start": "node build/bundle.js",
     "heroku-postbuild": "npm run build",
