@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = ({ appName }) => {
     return (
-        <Link to="/">
+        <Link to="/" className="navbar-brand">
             {appName}
 
         </Link>
