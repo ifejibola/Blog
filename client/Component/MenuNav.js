@@ -13,11 +13,11 @@ function MenuNav(props) {
                     <div className="navbar-brand">
                         <Banner appName={props.appName} />
                     </div>
-                    <Link to="" className="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+                    <a to="#navbar-mobile-style-2" className="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </Link>
+                    </a>
                     <ul className="nav navbar-nav">
                         {/* <li className="nav-item navbar-dropdown navbar-dropdown-mega active"> */}
                         <li className="nav-item navbar-dropdown navbar-dropdown-mega">
@@ -143,7 +143,7 @@ function MenuNav(props) {
                         <div className="navbar-brand">
                             <Banner />
                         </div>
-                        <Link to="" className="navbar-toggle" href="#" data-fancybox-close>
+                        <Link to="#" className="navbar-toggle" href="" data-fancybox-close>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -155,17 +155,39 @@ function MenuNav(props) {
                         <div className="col-12 col-md-7 col-lg-5 col-xl-4">
                             <div className="navbar-body">
                                 <ul className="nav navbar-nav navbar-nav-collapse">
-                                    <li className="nav-item navbar-collapse active">
-                                        <Link to="/about" href="#navbarCollapseHome" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseHome">
-                                            <span className="nav-link-name">about</span>
+                                    {/* <li className="nav-item navbar-collapse active"> */}
+                                    <li className="nav-item navbar-collapse">
+                                        <div href="#navbarCollapseHome" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseHome">
+                                            <Link to="/Home" className="nav-link-name">Home</Link>
+                                            {/* <span className="nav-link-name">about</span> */}
                                             <svg className="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
-                                        </Link>
+                                        </div>
 
                                     </li>
                                     <li className="nav-item navbar-collapse">
-                                        <Link to="" href="#navbarCollapseProjects" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseProjects">
+                                        <div href="#navbarCollapseHome" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseHome">
+                                            <Link to="/single" className="nav-link-name">single</Link>
+                                            {/* <span className="nav-link-name">about</span> */}
+                                            <svg className="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                    </li>
+                                    <li className="nav-item navbar-collapse">
+                                        <div href="#navbarCollapseHome" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseHome">
+                                            <Link to="/about" className="nav-link-name">About</Link>
+                                            {/* <span className="nav-link-name">about</span> */}
+                                            <svg className="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                    </li>
+                                    {/* <li className="nav-item navbar-collapse">
+                                        <Link to="/" href="#navbarCollapseProjects" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseProjects">
                                             <span className="nav-link-name">projects</span>
                                             <svg className="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -191,8 +213,8 @@ function MenuNav(props) {
 
                                                         </ul>
                                                     </div>
-                                                </li>
-                                                <li className="nav-item navbar-collapse">
+                                                </li> */}
+                                    {/* <li className="nav-item navbar-collapse">
                                                     <Link to="" href="#navbarCollapse2Column" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapse2Column">
                                                         <span className="nav-link-name">2 column</span>
                                                         <svg className="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,29 +231,12 @@ function MenuNav(props) {
 
                                                         </ul>
                                                     </div>
-                                                </li>
+                                                </li> */}
 
-                                            </ul>
+                                    {/* </ul>
                                         </div>
-                                    </li>
+                                    </li> */}
 
-                                    <li className="nav-item navbar-collapse">
-                                        <Link to="" href="#navbarCollapseContact" className="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseContact">
-                                            <span className="nav-link-name">contact</span>
-                                            <svg className="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </Link>
-                                        <div className="navbar-collapse-menu collapse" id="navbarCollapseContact">
-                                            <ul className="nav navbar-nav">
-                                                <li className="nav-item">
-                                                    <Link to="" href="contact-1.html" className="nav-link">
-                                                        <span className="nav-link-name">Contact 1</span>
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -241,15 +246,15 @@ function MenuNav(props) {
                                 <div className="mb-60">
                                     <p className="lead mb-17 font-weight-medium">Contact info:</p>
                                     <ul className="list-group borderless font-size-17">
-                                        <li className="list-group-item">Email: <Link to="" href="mailto:hello@themebau.com?subject=Test%20Address%20Email">hello@themebau.com</Link></li>
-                                        <li className="list-group-item">Phone: <Link to="" href="callto:+1202-358-0309">+1 202-358-0309</Link></li>
+                                        <li className="list-group-item">Email: <Link to="" href="mailto:hello@themebau.com?subject=Test%20Address%20Email">ife.jibola@gmail.com</Link></li>
+                                        <li className="list-group-item">Phone: <Link to="" href="callto:+1202-358-0309">+1 6474476545</Link></li>
                                     </ul>
                                 </div>
                                 <div className="mb-60">
                                     <p className="lead mb-17 font-weight-medium">Address:</p>
                                     <ul className="list-group borderless font-size-17">
-                                        <li className="list-group-item">2260 Lady Bug Drive,</li>
-                                        <li className="list-group-item">New York, NY 10011</li>
+                                        <li className="list-group-item">Duffrin</li>
+                                        <li className="list-group-item">Vaughn, ON L4J 7S7</li>
                                     </ul>
                                 </div>
                                 <ul className="nav nav-gap-sm navbar-nav nav-social align-items-center mt-n10">
