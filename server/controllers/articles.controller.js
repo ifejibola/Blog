@@ -1,3 +1,5 @@
+import { sql } from "../../Model/db";
+
 const articleDefault = [{
     title: "A Dog's Life",
     createdAt: new Date(),
@@ -8,7 +10,18 @@ const articleDefault = [{
     description: "Flop of the Decade!!"
 },]
 
+const newBlog = async (req, res, next) => {
 
+    const [title, description, content] = req.body;
+    const newPost = {
+        title: re
+    }
+    try {
+        const newPost = `INSERT INTO user_tbl(uuid_generate_v4())`
+    } catch (err) {
+
+    };
+};
 const article_list = (req, res, next) => {
     const articles = articleDefault;
     try {

@@ -4,6 +4,7 @@ import path from 'path'
 import cors from 'cors'
 import proxy from 'express-http-proxy'
 
+
 import dotenv from 'dotenv'
 
 import createStore from './helpers/createStore'
@@ -14,10 +15,13 @@ import articlesRoutes from './routes/article.routes'
 import { matchRoutes } from 'react-router-config'
 import MainRouter from '../client/MainRouter'
 
+import { sql } from '../Model/db';
+
 dotenv.config();
 
 //Express 
 const server = express();
+
 
 server.use(
     '/api',
@@ -62,8 +66,23 @@ server.use(logger)
 
 server.use('/', articlesRoutes)
 
+async function db() {
+    const person = await sql`
+    SELECT * FROM user_tbl
+`;
+    const tables = await sql`
+    SELECT * FROM user_tbl
+        INNER JOIN address
+        ON user_tbl.user_uuid = address.add_uuid
+    `;
+
+    console.log('db: ', person);
+    console.log(tables)
+};
 
 server.get('*', (req, res) => {
+
+    db();
     //Redux
     const store = createStore(req)
 
