@@ -16,7 +16,7 @@
     "build": "NODE_ENV=production webpack --config webpack.config.client.js && webpack --config webpack.config.server.js",
     "start": "node build/bundle.js",
     "heroku-postbuild": "npm run build",
-    "test": "mocha --watch ./test ./ ./"
+    "test": "mocha ./test ./ ./"
   },
   "keywords": [
     "Article",
