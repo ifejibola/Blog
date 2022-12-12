@@ -1,5 +1,5 @@
 import { sql } from "../../Model/db";
-import { GET_ASYNC, SET_ASYNC } from '../../redis'
+import { GET_ASYNC, SET_ASYNC } from '../redis'
 
 
 const articleDefault = [{
