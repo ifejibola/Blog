@@ -3,7 +3,7 @@ import express from 'express'
 import path from 'path'
 import cors from 'cors'
 import proxy from 'express-http-proxy'
-
+import responseTime from 'response-time'
 
 import dotenv from 'dotenv'
 
@@ -14,7 +14,7 @@ import articlesRoutes from './routes/article.routes'
 
 import { matchRoutes } from 'react-router-config'
 import MainRouter from '../client/MainRouter'
-
+// import fileUpload from 'express-fileupload'
 import { sql } from '../Model/db';
 
 dotenv.config();
@@ -25,8 +25,8 @@ const server = express();
 
 server.use(
     '/api',
-    proxy('http://blog-deployer.herokuapp.com', {
-        // proxy(`http:localhost:${process.env.PORT}`, {
+    // proxy('http://blog-deployer.herokuapp.com', {
+    proxy(`http://localhost:${process.env.PORT}`, {
         // proxyReqOptDecorator
         proxyReqOptDecorator(options) {
             // options.headers['x-forwarded-host'] = 'localhost:9090';
@@ -34,14 +34,26 @@ server.use(
         }
     })
 );
-server.use(express.json());
+server.use(express.json({ limit: '50mb' }));
+server.use(express.urlencoded({ limit: '50mb', extended: false }));
+// server.use(fileUpload({
+//     limits: { fileSize: 50 * 1024 * 1024 },
+// }));
+server.use(responseTime());
+// server.use(express.json());
 // cors
 server.use(cors());
 
 // server.set('port', process.env.PORT)
 server.set('port', process.env.PORT || 9090)
 
+console.log('pathhhh', (__dirname, 'public'))
+console.log('pathhhh', path.join(__dirname, 'public'))
+
 // make folder public
+// server.use(express.static('single'))
+server.use('/single', express.static('./'))
+server.use(express.static('./'))
 server.use(express.static('public'))
 
 server.use((req, res, next) => {
@@ -82,7 +94,7 @@ async function db() {
 
 server.get('*', (req, res) => {
 
-    db();
+    // db();
     //Redux
     const store = createStore(req)
 

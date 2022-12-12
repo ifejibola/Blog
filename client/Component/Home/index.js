@@ -1,7 +1,8 @@
-import React, { Component, useEffect } from 'react'
+import React, { useState, Component, useEffect } from 'react'
 import { connect } from 'react-redux'
 import Header from '../Header'
 import MainView from './MainView'
+import Pagination from '../Pagination'
 
 import { Helmet } from 'react-helmet'
 
@@ -9,10 +10,24 @@ import { fetch_Articles_List } from '../../actions/articleActions'
 
 function Home(props) {
 
-    useEffect(() => {
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage, setPostsPerPage] = useState(2);
 
+
+    useEffect(() => {
+        setLoading(true);
         props.fetch_Articles_List()
+        setLoading(false);
     }, [])
+
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstpoST = indexOfLastPost - postsPerPage;
+    const currentPosts = props.articles.slice(indexOfFirstpoST, indexOfLastPost);
+
+    //change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     function head() {
         return (
@@ -29,14 +44,16 @@ function Home(props) {
         });
     }
 
+
     return (
         <>
 
             {head()}
 
             <Header />
-            <MainView articles={props.articles} />
-
+            <MainView articles={currentPosts} isLoading={loading} />
+            {/* <MainView articles={props.articles} isLoading={loading} /> */}
+            <Pagination postsPerPage={postsPerPage} totalPosts={props.articles.length} paginate={paginate} />
         </>
     )
 }

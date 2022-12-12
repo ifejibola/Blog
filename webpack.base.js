@@ -1,20 +1,22 @@
 const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
     stats: 'minimal',
-
+    // externalsPresets: { node: true }, // ignore built in modules like paht, fs, etc
+    // externals: [nodeExternals()], // ignore modules within node_modules
     // Tell webpack to run babel on every file it runs through 
-    resolve: {
-        // ...rest of the resolve config
-        fallback: {
-            "fs": false,
-            // "path": require.resolve("path-browserify"),
-            // "crypto": require.resolve("crypto-browserify"),
-            // "stream": require.resolve("stream-browserify"),
-            // "buffer": require.resolve("buffer/"),
-        },
-        extensions: ['.js', '.jsx']
-    },
+    // resolve: {
+    //     // ...rest of the resolve config
+    //     fallback: {
+    //         "fs": false,
+    //         // "path": require.resolve("path-browserify"),
+    //         // "crypto": require.resolve("crypto-browserify"),
+    //         // "stream": require.resolve("stream-browserify"),
+    //         // "buffer": require.resolve("buffer/"),
+    //     },
+    //     extensions: ['.js', '.jsx']
+    // },
     module: {
         rules: [
             {

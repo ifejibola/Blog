@@ -1,5 +1,6 @@
 CREATE DATABASE blog;
 
+
 CREATE TABLE address (
 
     add_uuid UUID NOT NULL PRIMARY KEY,
@@ -26,6 +27,14 @@ CREATE TABLE user_tbl (
 CREATE TABLE posts(
     post_uuid UUID NOT NULL PRIMARY KEY,
     title VARCHAR(100) NOT NULL, 
-    description VARCHAR(100) NOT NULL,
-    content VARCHAR(900) NOT NULL
+    post_description VARCHAR(100) NOT NULL,
+    content VARCHAR(900) NOT NULL,
+    default_image VARCHAR(100) NOT NULL
+);
+
+CREATE Table post_images(
+    image_uuid UUID NOT NULL PRIMARY KEY,
+    image_name VARCHAR(100) NOT NULL,
+    image_path VARCHAR(100) NOT NULL,
+    post_id UUID REFERENCES posts(post_uuid)
 );

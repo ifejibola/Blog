@@ -26,7 +26,7 @@ export default [
                 ...NewPost,
             },
             {
-                path: '/single',
+                path: '/single/:id',
                 ...Single
             },
             {

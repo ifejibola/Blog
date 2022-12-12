@@ -8,8 +8,9 @@ const config = {
     name: "browser",
     // mode: "development",
     devtool: 'eval-source-map',
-    entry: './client/Main.js',
-    devtool: 'cheap-module-source-map',
+    entry: {
+        bundle: './client/Main.js'
+    },
 
     output: {
         filename: "bundle.js",

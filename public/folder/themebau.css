@@ -16723,7 +16723,7 @@ select.form-control {
     padding: 13.5px 40px;
     margin-bottom: 0;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.993);
     cursor: pointer;
     border: 1px solid #202020;
     -webkit-transition: border-color 0.15s, color 0.15s, background-color 0.15s;
@@ -16760,7 +16760,8 @@ select.form-control {
 .checkbox-btn.checked + label,
 .checkbox-btn:checked + label {
     color: #fff;
-    background-color: #202020;
+    /* background-color: #202020; */
+    background-color: #000000;
 }
 .checkbox-btn.checked + label::after,
 .checkbox-btn:checked + label::after {
@@ -16774,8 +16775,8 @@ select.form-control {
 }
 .checkbox-btn:focus + label,
 .checkbox-btn:hover + label {
-    color: #fff;
-    background-color: #202020;
+    color: rgb(238, 238, 238);
+    background-color: #000000;
 }
 .nav {
     margin-right: -15px;

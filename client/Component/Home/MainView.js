@@ -33,6 +33,11 @@ function MainView(props) {
     let { articles } = props;
     console.log('mainview', props.articles)
 
+
+    if (props.isLoading) {
+        return <h2>Loading...</h2>
+    }
+
     return (
         <>
             <div className="container">
@@ -60,7 +65,8 @@ function MainView(props) {
                     articles.map((article, i) => {
 
                         return (
-                            <ArticlePreview key={i} article={article} />
+                            <ArticlePreview key={article.post_uuid} article={article} />
+                            // <ArticlePreview key={i} article={article} />
                         )
                     })
                 }

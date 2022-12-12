@@ -1,4 +1,4 @@
-import { FETCH_ALL_ARTICLES } from "../actions/types";
+import { FETCH_ALL_ARTICLES, ADD_POST, SINGLE_POST } from "../actions/types";
 
 const articleDefault = [{
     title: "A Dog's Life2",
@@ -28,6 +28,8 @@ const articleDefault = [{
 let initialState = {
     // articles: articleDefault,
     articles: [],
+    // articles: '', using a '' will cause a undefined error when mapping, find out why??
+    singlePost: []
 };
 
 export default (state = initialState, action) => {
@@ -44,6 +46,17 @@ export default (state = initialState, action) => {
                 ...state,
                 articles: action.payload.data, // (action.response.data)
                 // errors: action.payload.errors
+            }
+        case ADD_POST:
+            console.log('add post: ', action.payload);
+            return {
+                ...state,
+                // added_post: action.payload
+            }
+        case SINGLE_POST:
+            return {
+                ...state,
+                singlePost: action.payload.data,
             }
         // default:
         //     return state
